@@ -100,15 +100,30 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 							<div class="col-sm-4 col-xs-5">
 								<div class="mini-cart text-right">
 									<ul>
+									<?php if(isset($_SESSION['member']) && $_SESSION['member'] !=null) { ?>
+										<li><?php echo $_SESSION['member']['name']?>您好　<a href="customer-account.php" >會員專區 </a><span>|</span></li>
+										<li>
+											<a href="frontend/logout.php"><i class="fa fa-sign-out"></i> 登出</a>
+										</li>
+									<?php }else{ ?>
+										<li><a href="#" data-toggle="modal" data-target="#login-modal">會員登入 </a><span>|</span>
+										</li>
+										<li><a href="frontend/login.php?url=add">加入會員 </a><span>|</span>
+										</li>
+									<?php } ?>
+										<li><a href="contact.php">聯絡我們</a></li>
+										
 										<li>
 											<a class="cart-icon" href="cart.php">
 												<i class="zmdi zmdi-shopping-cart"></i>
 												<span><?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) echo count($_SESSION['Cart']); else echo "0"; ?></span>
 											</a>
+											
 											<div class="mini-cart-brief text-left">
 												<div class="cart-items">
 													<p class="mb-0">You have <span><?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) echo count($_SESSION['Cart']); else echo "0"; ?> items</span> in your shopping bag</p>
 												</div>
+												<?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) {?>>
 												<div class="all-cart-product clearfix">
 												<?php 
 													$total_price = 0;
@@ -133,7 +148,12 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
                                    	 					$_SESSION['order']['total_price'] = $total_price;
 														?>
 												</div>
-												
+												<?php } else{ 
+												$total_price = 0; ?>
+												<div class="cart-items">
+												<p class="mb-0">目前購物車沒有商品，請至<a href="shop_f.php">產品專區</a>進行購物。</p> 
+												</div>        
+												<?php } ?>
 												<div class="cart-totals">
 													<h5 class="mb-0">Total <span class="floatright">$NT <?php echo $total_price?></span></h5>
 												</div>
@@ -149,6 +169,37 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 							</div>
 						</div>
 					</div>
+					<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+						<div class="modal-dialog modal-sm">
+
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title" id="Login">會員登入</h4>
+								</div>
+								<div class="modal-body">
+									<form action="frontend/member_login.php" method="post">
+										<div class="form-group">
+											<input type="text" class="form-control" id="account" placeholder="email" name="account">
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control" id="password" placeholder="password" name="password">
+										</div>
+										
+
+										<p class="text-center">
+											<button class="btn btn-primary"><i class="fa fa-sign-in"></i> 登入</button>
+										</p>
+
+									</form>
+
+									<p class="text-center text-muted">尚未註冊會員?</p>
+									<p class="text-center text-muted"><a href="frontend/login.php"><strong>立即註冊</strong></a>! 1分鐘立即註冊即可領取百元購物金 !</p>
+
+								</div>
+							</div>
+						</div>
+       				</div>
 				</div>
 				<!-- MAIN-MENU START -->
 				<div class="menu-toggle hamburger hamburger--emphatic hidden-xs">
@@ -157,30 +208,22 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 					</div>
 				</div>
 				<div class="main-menu  hidden-xs">
-					<nav>
+				<nav>
 						<ul>
-							<li><a href="index.php">home</a></li>
-							<li><a href="frontend/shop.php">accesories</a></li>
-							<li><a href="frontend/shop.php">lookbook</a></li>
-							<li><a href="frontend/blog.php">blog</a></li>
-							<li><a href="#">pages</a>
+							<li><a href="../index.php">home</a></li>
+							<li><a href="#">shop</a>
 								<div class="sub-menu menu-scroll">
+										
 									<ul>
-										<li class="menu-title">Page's</li>
-										<li><a href="frontend/shop.php">Shop</a></li>
-										<li><a href="frontend/single-product.php">Single Product</a></li>
-										<li><a href="frontend/cart.php">Shopping Cart</a></li>
-										<li><a href="frontend/wishlist.php">Wishlist</a></li>
-										<li><a href="frontend/checkout.php">Checkout</a></li>
-										<li><a href="frontend/order.php">Order</a></li>
-										<li><a href="frontend/login.php">login / Registration</a></li>
-										<li><a href="frontend/my-account.php">My Account</a></li>
-										<li><a href="frontend/404.php">404</a></li>
-										<li><a href="frontend/blog.php">Blog</a></li>
-										<li><a href="frontend/single-blog.php">Single Blog</a></li>
-										<li><a href="frontend/about.php">About Us</a></li>
-										<li><a href="frontend/contact.php">Contact</a></li>
+									
+										<li class="menu-title">shop's</li>
+										<?php foreach($categories as $product_categories){  ?>
+										<li><a href="frontend/shop.php?category_id=<?php echo $product_categories['product_categoryID']; ?>"><?php echo $product_categories['category']; ?></a></li>
+										<!-- <li><a href="shop.php">Bags</a></li>
+										<li><a href="blog.php">Accessories</a></li> -->
+									<?php } ?>
 									</ul>
+								
 								</div>
 							</li>
 							<li><a href="frontend/about.php">about us</a></li>

@@ -30,7 +30,7 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 									<?php }else{ ?>
 										<li><a href="#" data-toggle="modal" data-target="#login-modal">會員登入 </a><span>|</span>
 										</li>
-										<li><a href="login.php">加入會員 </a><span>|</span>
+										<li><a href="login.php?url=add">加入會員 </a><span>|</span>
 										</li>
 									<?php } ?>
 										<li><a href="contact.php">聯絡我們</a></li>
@@ -40,10 +40,12 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 												<i class="zmdi zmdi-shopping-cart"></i>
 												<span><?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) echo count($_SESSION['Cart']); else echo "0"; ?></span>
 											</a>
+											
 											<div class="mini-cart-brief text-left">
 												<div class="cart-items">
 													<p class="mb-0">You have <span><?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) echo count($_SESSION['Cart']); else echo "0"; ?> items</span> in your shopping bag</p>
 												</div>
+												<?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) {?>>
 												<div class="all-cart-product clearfix">
 												<?php 
 													$total_price = 0;
@@ -68,7 +70,12 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
                                    	 					$_SESSION['order']['total_price'] = $total_price;
 														?>
 												</div>
-												
+												<?php } else{ 
+												$total_price = 0; ?>
+												<div class="cart-items">
+												<p class="mb-0">目前購物車沒有商品，請至<a href="shop_f.php">產品專區</a>進行購物。</p> 
+												</div>        
+												<?php } ?>
 												<div class="cart-totals">
 													<h5 class="mb-0">Total <span class="floatright">$NT <?php echo $total_price?></span></h5>
 												</div>
@@ -115,7 +122,7 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 								</div>
 							</div>
 						</div>
-       </div>
+       			</div>
 				</div>
 				<!-- MAIN-MENU START -->
 				<div class="menu-toggle hamburger hamburger--emphatic hidden-xs">

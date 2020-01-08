@@ -9,7 +9,7 @@ if(isset($member) && $member['account'] !=null ){
     if(isset($_POST['url']) && $_POST['url'] == 'basket'){
         header('Location: checkout1.php');
     }else{
-    header('Location: my-account.php');
+    header('Location: customer-account.php');
     }
 
 }else{
