@@ -26,7 +26,7 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 									<?php if(isset($_SESSION['member']) && $_SESSION['member'] !=null) { ?>
 										<li><?php echo $_SESSION['member']['name']?>您好　<a href="customer-account.php" >會員專區 </a><span>|</span></li>
 										<li>
-											<a href="logout.php"><i class="fa fa-sign-out"></i> 登出</a>
+											<a href="logout.php"><i class="fa fa-sign-out"></i> 登出</a><span>|</span>
 										</li>
 									<?php }else{ ?>
 										<li><a href="#" data-toggle="modal" data-target="#login-modal">會員登入 </a><span>|</span>

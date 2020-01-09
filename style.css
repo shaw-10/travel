@@ -1844,6 +1844,17 @@ input.cart-plus-minus-box {
   border-radius: 0;
   box-shadow: none;
 }
+.my-account-menu  {
+  background: #C8A165;
+  color: #fff;
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 30px;
+  text-transform: uppercase;
+}
 .my-account-menu a {
   background: #C8A165;
   color: #fff;

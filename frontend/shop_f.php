@@ -115,7 +115,7 @@ $products = $query->fetchAll(PDO::FETCH_ASSOC);
 													</span>
 												</div>
 												<div class="product-action clearfix">
-												<form action="cart/add_cart_demo.php" method="post">
+												<form action="cart/add_cart_demo1.php" method="post">
 													<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
 													<a href="#" data-toggle="modal"  data-target="#productModal" title="Quick View"><i class="zmdi zmdi-zoom-in"></i></a>
 													<a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="zmdi zmdi-refresh"></i></a>
