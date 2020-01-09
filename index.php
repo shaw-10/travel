@@ -159,8 +159,8 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 												</div>
 												
 												<div class="cart-bottom  clearfix">
-													<a href="cart.php" class="button-one floatleft text-uppercase" data-text="View cart">View cart</a>
-													<a href="#" class="button-one floatright text-uppercase" data-text="Check out">Check out</a>
+													<a href="frontend/cart.php" class="button-one floatright text-uppercase" data-text="View cart">View cart</a>
+													<!-- <a href="#" class="button-one floatright text-uppercase" data-text="Check out">Check out</a> -->
 												</div>
 											</div>
 										</li>
