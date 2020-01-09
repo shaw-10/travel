@@ -46,160 +46,132 @@
 									<li class="active"><a href="#check-out" data-toggle="tab">check out</a></li>
 									<li><a href="#" data-toggle="tab">order complete</a></li>
 								</ul>
-
+								
+											<!-- <a  data-toggle="collapse" data-parent="#accordion" href="#my-info" >
+											My Personal Information
+											</a> -->
+										
 								<!-- Tab panes -->
-								<div class="tab-content">
-									<!-- check-out start -->
-									<div class="tab-pane active" id="check-out">
-										<form action="#">
-											<div class="shop-cart-table check-out-wrap">
-												<div class="row">
-													<div class="col-md-6 col-sm-6 col-xs-12">
-														<div class="billing-details pr-20">
-															<h4 class="title-1 title-border text-uppercase mb-30">billing details</h4>
-															<input type="text" placeholder="Your name here...">
-															<input type="text" placeholder="Email address here...">
-															<input type="text" placeholder="Phone here...">
-															<input type="text" placeholder="Company neme here...">
-															<select class="custom-select mb-15">
-																<option>Contry</option>
-																<option>Bangladesh</option>
-																<option>United States</option>
-																<option>united Kingdom</option>
-																<option>Australia</option>
-																<option>Canada</option>
-															</select>
-															<select class="custom-select mb-15">
-																<option>State</option>
-																<option>Dhaka</option>
-																<option>New York</option>
-																<option>London</option>
-																<option>Melbourne</option>
-																<option>Ottawa</option>
-															</select>
-															<select class="custom-select mb-15">
-																<option>Town / City</option>
-																<option>Dhaka</option>
-																<option>New York</option>
-																<option>London</option>
-																<option>Melbourne</option>
-																<option>Ottawa</option>
-															</select>
-															<textarea class="custom-textarea" placeholder="Your address here..." ></textarea>
+								<div class="login-area  pt-80 pb-80">
+									<div class="container">
+										
+											<div class="row">
+											
+												<div class="col-md-6 col-sm-6 col-xs-6">
+													<div class="my-account-menu" >
+														<div class="customer-login text-left">
+															<h4 class="title-1 title-border text-uppercase mb-30">Registered customers</h4>
+															<div class="billing-details ">
+																<input type="text" placeholder="Your name here...">
+																<input type="text" placeholder="Email address here...">
+																<input type="text" placeholder="Phone here...">
+															</div>
 														</div>
-													</div>
-													<div class="col-md-6 col-sm-6 col-xs-12 mt-xs-30">
-														<div class="billing-details pl-20">
-															<h4 class="title-1 title-border text-uppercase mb-30">ship to different address</h4>
-															<input type="text" placeholder="Your name here...">
-															<input type="text" placeholder="Email address here...">
-															<input type="text" placeholder="Phone here...">
-															<input type="text" placeholder="Company neme here...">
-															<select class="custom-select mb-15">
-																<option>Contry</option>
-																<option>Bangladesh</option>
-																<option>United States</option>
-																<option>united Kingdom</option>
-																<option>Australia</option>
-																<option>Canada</option>
-															</select>
-															<select class="custom-select mb-15">
-																<option>State</option>
-																<option>Dhaka</option>
-																<option>New York</option>
-																<option>London</option>
-																<option>Melbourne</option>
-																<option>Ottawa</option>
-															</select>
-															<select class="custom-select mb-15">
-																<option>Town / City</option>
-																<option>Dhaka</option>
-																<option>New York</option>
-																<option>London</option>
-																<option>Melbourne</option>
-																<option>Ottawa</option>
-															</select>
-															<textarea class="custom-textarea" placeholder="Your address here..." ></textarea>
-														</div>
-													</div>
-													<div class="col-md-6 col-sm-6 col-xs-12">
-														<div class="our-order payment-details mt-60 pr-20">
-															<h4 class="title-1 title-border text-uppercase mb-30">our order</h4>
-															<table>
-																<thead>
-																	<tr>
-																		<th><strong>Product</strong></th>
-																		<th class="text-right"><strong>Total</strong></th>
-																	</tr>
-																</thead>
-																<tbody>
-																	<tr>
-																		<td>Dummy Product Name  x 2</td>
-																		<td class="text-right">$86.00</td>
-																	</tr>
-																	<tr>
-																		<td>Dummy Product Name  x 1</td>
-																		<td class="text-right">$69.00</td>
-																	</tr>
-																	<tr>
-																		<td>Cart Subtotal</td>
-																		<td class="text-right">$155.00</td>
-																	</tr>
-																	<tr>
-																		<td>Shipping and Handing</td>
-																		<td class="text-right">$15.00</td>
-																	</tr>
-																	<tr>
-																		<td>Vat</td>
-																		<td class="text-right">$00.00</td>
-																	</tr>
-																	<tr>
-																		<td>Order Total</td>
-																		<td class="text-right">$170.00</td>
-																	</tr>
-																</tbody>
-															</table>
-														</div>
-													</div>
-													<!-- payment-method -->
-													<div class="col-md-6 col-sm-6 col-xs-12">
-														<div class="payment-method mt-60  pl-20">
-															<h4 class="title-1 title-border text-uppercase mb-30">payment method</h4>
-															<div class="payment-accordion">
-																<!-- Accordion start  -->
-																<h3 class="payment-accordion-toggle active">Direct Bank Transfer</h3>
-																<div class="payment-content default">
-																	<p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.</p>
-																</div> 
-																<!-- Accordion end -->
-																<!-- Accordion start -->
-																<h3 class="payment-accordion-toggle">Cheque Payment</h3>
-																<div class="payment-content">
-																	<p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-																</div>
-																<!-- Accordion end -->
-																<!-- Accordion start -->
-																<h3 class="payment-accordion-toggle">PayPal</h3>
-																<div class="payment-content">
-																	<p>Pay via PayPal; you can pay with your credit card if you don�t have a PayPal account.</p>
-																	<a href="#"><img src="../img/payment/1.png" alt="" /></a>
-																	<a href="#"><img src="../img/payment/2.png" alt="" /></a>
-																	<a href="#"><img src="../img/payment/3.png" alt="" /></a>
-																	<a href="#"><img src="../img/payment/4.png" alt="" /></a>
-																</div>
-																<!-- Accordion end --> 
-																<button class="button-one submit-button mt-15" data-text="place order" type="submit">place order</button>			
-															</div>															
-														</div>
-													</div>
+													</div>	
+													
+																	
 												</div>
-											</div>
-										</form>											
-									</div>
-									<!-- check-out end -->
-									
-								</div>
+												
+											
 
+											<form action="update_member.php" method="post">
+												<div class="col-md-6 col-sm-6 col-xs-6">
+													<div class="customer-login text-left">
+														<h4 class="title-1 title-border text-uppercase mb-30">new customers</h4>
+														<div class="billing-details ">
+															<div class="col-sm-12 col-md-12">
+																<div class="form-group">
+																	<label for="firstname">帳號</label>
+																	<input type="text" disabled="disabled"  class="form-control" id="account" name="account" value="<?php echo $_SESSION['member']['account']; ?>">
+																</div>
+															</div>
+																<div class="col-sm-12 col-md-12">
+																	<div class="form-group">
+																		<label for="firstname">姓名</label>
+																		<input type="text" placeholder="Your name here..." class="form-control" id="name" name="name" value="<?php echo $_SESSION['member']['name']; ?>">
+																	</div>
+																</div>
+																<div class="col-sm-12 col-md-12">									
+																	<div class="form-group">
+																		<label for="company">生日</label>
+																		<input type="text" class="form-control" id="birthday" name="birthday" value="<?php echo $_SESSION['member']['birthday']; ?>">
+																	</div>
+																</div>	
+																<div class="col-sm-12 col-md-12">
+																	<div class="form-group">
+																		<label for="street">性別</label>
+																		<div class="form-control" style="border:none;">
+																			<label class="radio-inline"><input type="radio" name="gender" value="1" checked>男</label>
+																			<label class="radio-inline"><input type="radio" name="gender" value="0" >女</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-12 col-md-12">
+																	<div class="form-group">
+																		<label for="phone">家用電話</label>
+																		<input type="text" class="form-control" id="phone" name="phone" value="<?php echo $_SESSION['member']['phone']; ?>">
+																	</div>
+																</div>
+																<div class="col-sm-12 col-md-12">
+																	<div class="form-group">
+																		<label for="phone">行動電話</label>
+																		<input type="text" class="form-control" id="mobile" name="mobile" value="<?php echo $_SESSION['member']['mobile']; ?>">
+																	</div>
+																</div>	
+																<div class="col-sm-12 col-md-12">
+																	<div class="form-group">
+																		<label for="email">備用Email</label>
+																		<input type="text" class="form-control" id="email" name="email" value="<?php echo $_SESSION['member']['email']; ?>">
+																	</div>
+																</div>	
+															</div>
+
+															<div id="twzipcode">
+																<div class="col-sm-4 col-md-4">
+																	<div class="form-group">
+																		<label for="zip">郵遞區號</label>
+																		<input type="text" class="form-control" id="zipcode" name="zipcode" value="<?php echo $_SESSION['member']['zipcode']; ?>">
+																	</div>
+																</div>
+																<div class="col-sm-4 col-md-4">
+																	<div class="form-group">
+																		<label for="state">城市</label>
+																		<select class="custom-select mb-15" id="county" name="county"></select>
+																	</div>
+																</div>
+																<div class="col-sm-4 col-md-4">
+																	<div class="form-group">
+																		<label for="country">地區</label>
+																		<select class="custom-select mb-15" id="district" name="district"></select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-12 col-md-12">
+																<div class="form-group">
+																	<label for="city">地址</label>
+																	<!-- <textarea placeholder="Your address here..." class="custom-textarea" ></textarea> -->
+																	<input type="text" class="form-control" id="address" name="address" value="<?php echo $_SESSION['member']['address']; ?>">
+																</div>
+															</div>
+															
+															<div>
+																<input type="hidden" name="EditForm" value="UPDATE">
+																<input type="hidden" name="memberID" value="<?php echo $_SESSION['member']['memberID']; ?>">
+																<button type="submit" data-text="regiter" class="button-one submit-button mt-15">更新資料</button>
+														
+															</div>
+														
+																	
+																		
+														
+														
+													</div>					
+												</div>
+											</form>
+											</div>
+										
+									</div>
+			</div>
 							</div>
 						</div>
 					</div>

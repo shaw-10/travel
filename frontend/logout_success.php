@@ -34,7 +34,7 @@ $sql= "INSERT INTO members  (account, password, name, created_at) VALUES (:accou
                 <div class="col-md-12">
 
                     <ul class="breadcrumb">
-                       
+                        
                     </ul>
                     <div class="container-fluid">
                     <div class="row" id="error-page">
@@ -44,25 +44,12 @@ $sql= "INSERT INTO members  (account, password, name, created_at) VALUES (:accou
                                 <p class="text-life">
                                     <img src="../img/logo/logo.png" alt="Cake House template">
                                 </p>
-                              <?php if($result){ ?> 
-                                <?php if(isset($_POST['url']) && $_POST['url'] == 'basket'){ ?>
-                                    <script> window.location.href="checkout1.php"</script>
-                                <?php }else{ ?>
-                                <h3>註冊成功</h3>
-                                <h4 class="text-muted">恭喜您加入會員</h4>
-
-                                <p class="text-center">您可前往產品頁面瀏覽商品。<a href="shop.php?category_id=1">前往購物</a></p>
-                                <p class="buttons"><a href="../index.php" class="btn btn-primary"><i class="fa fa-home"></i> 回首頁</a>
-                                </p>
-                                <?php } ?>
-                              <?php }else{ ?>
-                                <h3>註冊失敗</h3>
-                                <h4 class="text-muted">請聯繫客服或前往註冊頁面重新註冊</h4>
+                                <h3>登出成功</h3>
+                               
 
                                
-                                <p class="buttons"><a href="login.php" class="btn btn-primary"><i class="fa fa-home"></i> 回註冊頁面</a>
+                                <p class="buttons"><a href="shop_f.php" class="btn btn-primary"><i class="fa fa-home"></i> 瀏覽產品</a>
                                 </p>
-                              <?php } ?>
                             </div>
                         </div>
                     </div>

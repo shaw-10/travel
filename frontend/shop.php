@@ -166,20 +166,20 @@ $products = $query->fetchAll(PDO::FETCH_ASSOC);
 			<?php require_once('template/footer.php'); ?>
 
 			<div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+				<div class="modal-dialog modal-sm">
 
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">訊息</h4>
-            </div>
-            <div class="modal-body text-center">
-                <p class="text-center text-muted">成功更新數量!</p>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-            </div>
-        </div>
-    </div>
-</div>      
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title">訊息</h4>
+							</div>
+							<div class="modal-body text-center">
+								<p class="text-center text-muted">成功更新數量!</p>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+							</div>
+						</div>
+				</div>
+			</div>      
 
 
 <?php if(isset($_GET['Existed']) && $_GET['Existed']== "true"){ ?>

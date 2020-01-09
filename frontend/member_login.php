@@ -13,7 +13,7 @@ if(isset($member) && $member['account'] !=null ){
     }
 
 }else{
-    header('Location: my-account.php');
+    header('Location: logout_error.php');
 
 }
 

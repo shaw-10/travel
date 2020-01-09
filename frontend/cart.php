@@ -1,7 +1,4 @@
-<?php 
-session_start();
 
-?>
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -56,8 +53,8 @@ session_start();
 								<!-- Nav tabs -->
 								<ul class="cart-page-menu row clearfix mb-30">
 									<li class="active"><a href="#shopping-cart" >shopping cart</a></li>
-									<li style="user-select: none;"><a href="#" >check out</a></li>
-									<li class="disabled"><a href="#" >order complete</a></li>
+									<li style="user-select: none;"><a href="#" disabled="disabled">check out</a></li>
+									<li class="disabled"><a href="#"disabled="disabled" >order complete</a></li>
 								</ul>
 
 								<!-- Tab panes -->
@@ -65,7 +62,7 @@ session_start();
 									<!-- shopping-cart start -->
 									
 									<div class="tab-pane active" id="shopping-cart">
-										<form action="checkout.php" method="post">
+										<form action="cart.php" method="post">
 										<?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) {?>>
 											<div class="shop-cart-table">
 												<div class="table-content table-responsive">
@@ -160,8 +157,12 @@ session_start();
 												
 											<div class="row">
 												<div class="col-md-12">
-													
-													<button type="submit" style="float:right" data-text="結 帳" class="button-one submit-button mt-15">結 帳</button>
+												<?php if(isset ($_SESSION['member']) && $_SESSION['member'] !=null){ ?>
+													<a href="checkout.php" class="button-one submit-button mt-15" data-text="結 帳" style="float:right">結 帳</a>
+												<?php }else { ?>
+													<a href="login.php?url=basket" class="button-one submit-button mt-15" data-text="結 帳" style="float:right">結 帳</a>
+												<?php } ?>
+													<!-- <button type="submit" style="float:right" data-text="結 帳" class="button-one submit-button mt-15">結 帳</button> -->
 												</div>
 											</div>
 										</form>	
@@ -528,47 +529,47 @@ session_start();
 			<?php require_once('template/footer.php'); ?>
 
 			<div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+				<div class="modal-dialog modal-sm">
 
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">訊息</h4>
-            </div>
-            <div class="modal-body text-center">
-                <p class="text-center text-muted">更新成功!</p>
-                
-            </div>
-        </div>
-    </div>
-</div>   
-<?php if($is_updated == "true"){ ?>   
-<script>
-        $(function(){
-            $('#info-modal').modal();  
-            // 2秒後視窗自動消失   
-            setTimeout(function() {
-                $('#info-modal').modal('hide');
-            }, 1500);       
-        });
-</script> 
-<?php 
-   $is_updated = "false";
-} ?>
-<?php if(isset($_GET['Del']) &&  $_GET['Del'] == "true"){ ?>   
-<script>
-        $(function(){
-            $('.modal-body>p').html("成功移除一個商品!");
-            $('#info-modal').modal();  
-            // 2秒後視窗自動消失   
-            setTimeout(function() {
-                $('#info-modal').modal('hide');
-            }, 1500);       
-        });
-</script> 
-<?php 
-  
-} ?>
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">訊息</h4>
+						</div>
+						<div class="modal-body text-center">
+							<p class="text-center text-muted">更新成功!</p>
+							
+						</div>
+					</div>
+				</div>
+			</div>   
+			<?php if($is_updated == "true"){ ?>   
+			<script>
+					$(function(){
+						$('#info-modal').modal();  
+						// 2秒後視窗自動消失   
+						setTimeout(function() {
+							$('#info-modal').modal('hide');
+						}, 1500);       
+					});
+			</script> 
+			<?php 
+			$is_updated = "false";
+			} ?>
+			<?php if(isset($_GET['Del']) &&  $_GET['Del'] == "true"){ ?>   
+			<script>
+					$(function(){
+						$('.modal-body>p').html("成功移除一個商品!");
+						$('#info-modal').modal();  
+						// 2秒後視窗自動消失   
+						setTimeout(function() {
+							$('#info-modal').modal('hide');
+						}, 1500);       
+					});
+			</script> 
+			<?php 
+			
+			} ?>
 
 	</body>
 </html>

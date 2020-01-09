@@ -35,3 +35,4 @@
 		<script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 
 		<link rel="stylesheet" href="../css/slick-theme.css">
+		<link rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">

@@ -6,6 +6,7 @@ require_once('../function/connection.php');
 $query = $db->query("SELECT * FROM product_categories ");
 $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 ?>
+
 		<!-- WRAPPER START -->
 		<div class="wrapper bg-dark-white">
 
