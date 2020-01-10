@@ -30,12 +30,12 @@
 						<div class="col-md-12">
 							<div class="heading-banner">
 								<div class="heading-banner-title">
-									<h2>Shopping Cart</h2>
+									<h2>購物車</h2>
 								</div>
 								<div class="breadcumbs pb-15">
 									<ul>
 										<li><a href="../index.php">Home</a></li>
-										<li>Shopping Cart</li>
+										<li>購物車</li>
 									</ul>
 								</div>
 							</div>
@@ -52,9 +52,9 @@
 							<div class="shopping-cart">
 								<!-- Nav tabs -->
 								<ul class="cart-page-menu row clearfix mb-30">
-									<li class="active"><a href="#shopping-cart" >shopping cart</a></li>
-									<li style="user-select: none;"><a href="#" disabled="disabled">check out</a></li>
-									<li class="disabled"><a href="#"disabled="disabled" >order complete</a></li>
+									<li class="active"><a href="#shopping-cart" >購物車</a></li>
+									<li style="user-select: none;"><a href="#" disabled="disabled">填寫資料</a></li>
+									<li class="disabled"><a href="#"disabled="disabled" >訂單完成</a></li>
 								</ul>
 
 								<!-- Tab panes -->
@@ -69,11 +69,11 @@
 													<table>
 														<thead>
 															<tr>
-																<th class="product-thumbnail">Product</th>
-																<th class="product-price">Price</th>
-																<th class="product-quantity">Quantity</th>
-																<th class="product-subtotal">Total</th>
-																<th class="product-remove">Remove</th>
+																<th class="product-thumbnail">商品</th>
+																<th class="product-price">價格</th>
+																<th class="product-quantity">數量</th>
+																<th class="product-subtotal">小計</th>
+																<th class="product-remove">移除商品</th>
 															</tr>
 														</thead>
 														<tbody>
@@ -144,7 +144,7 @@
 																<tbody>
 																	
 																	<tr>
-																		<td class="text-right">Cart Subtotal</td>
+																		<td class="text-right">購物車小計</td>
 																		<td class="text-right">$NT <?php echo $total_price?></td>
 																	</tr>
 																	

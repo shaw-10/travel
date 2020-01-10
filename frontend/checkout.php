@@ -20,12 +20,12 @@
 						<div class="col-md-12">
 							<div class="heading-banner">
 								<div class="heading-banner-title">
-									<h2>check out</h2>
+									<h2>填寫資料</h2>
 								</div>
 								<div class="breadcumbs pb-15">
 									<ul>
 										<li><a href="../index.php">Home</a></li>
-										<li>check out</li>
+										<li>填寫資料</li>
 									</ul>
 								</div>
 							</div>
@@ -42,9 +42,9 @@
 							<div class="shopping-cart">
 								<!-- Nav tabs -->
 								<ul class="cart-page-menu row clearfix mb-30">
-									<li class=""><a href="cart.php"disabled="disabled" >shopping cart</a></li>
-									<li class="active" style="user-select: none;"><a href="#" disabled="disabled">check out</a></li>
-									<li class="disabled"><a href="#"disabled="disabled" >order complete</a></li>
+									<li class=""><a href="cart.php"disabled="disabled" >購物車</a></li>
+									<li class="active" style="user-select: none;"><a href="#" disabled="disabled">填寫資料</a></li>
+									<li class="disabled"><a href="#"disabled="disabled" >訂單完成</a></li>
 								</ul>
 
 								<!-- Tab panes -->
@@ -195,7 +195,7 @@
 																<input type="hidden" name="order_no" value="<?php echo "HC" .date('YmdHis');?>"> 
 																<input type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s');?>"> 
 																
-																<button class="button-one submit-button mt-15" data-text="place order" type="submit" style="float:right">下訂單</button>			
+																<button class="button-one submit-button mt-15" data-text="place order" type="submit" style="float:right">確認結帳</button>			
 															</div>															
 														</div>
 													</div>

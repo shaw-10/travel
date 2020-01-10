@@ -26,12 +26,12 @@ $products = $query->fetchAll(PDO::FETCH_ASSOC);
 						<div class="col-md-12">
 							<div class="heading-banner">
 								<div class="heading-banner-title">
-									<h2>Shop</h2>
+									<h2>旅行好夥伴</h2>
 								</div>
 								<div class="breadcumbs pb-15">
 									<ul>
 										<li><a href="../index.php">Home</a></li>
-										<li>Shop</li>
+										<li>全部商品</li>
 									</ul>
 								</div>
 							</div>

@@ -7,13 +7,13 @@ $member = $query->fetch(PDO::FETCH_ASSOC);
 if(isset($member) && $member['account'] !=null ){
     $_SESSION['member']=$member;
     if(isset($_POST['url']) && $_POST['url'] == 'basket'){
-        header('Location: checkout1.php');
+        header('Location: checkout.php');
     }else{
     header('Location: customer-account.php');
     }
 
 }else{
-    header('Location: logout_error.php');
+    header('Location: login_error.php');
 
 }
 

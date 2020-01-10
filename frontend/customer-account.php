@@ -20,12 +20,12 @@
 						<div class="col-md-12">
 							<div class="heading-banner">
 								<div class="heading-banner-title">
-									<h2>Registration</h2>
+									<h2>會員專區</h2>
 								</div>
 								<div class="breadcumbs pb-15">
 									<ul>
 										<li><a href="index.php">Home</a></li>
-										<li>Registration</li>
+										<li>會員專區</li>
 									</ul>
 								</div>
 							</div>
@@ -39,17 +39,36 @@
 				<div class="container">
 					
 						<div class="row">
-						<form action="member_login.php" method="post">
+						<form data-toggle="validator" action="change_password.php" method="post">
 							<div class="col-md-12 col-sm-12 col-xs-12">
 								<div class="customer-login text-left">
-									<h4 class="title-1 title-border text-uppercase mb-30">Registered customers</h4>
+									<h4 class="title-1 title-border text-uppercase mb-30">修改密碼</h4>
 									<div class="billing-details ">
-													<input type="text" placeholder="Your name here...">
-													<input type="text" placeholder="Email address here...">
-													<input type="text" placeholder="Phone here...">
+									<div class="col-sm-12 col-md-12">
+										<div class="form-group">
+											<label for="password_old">舊密碼</label>
+											<input type="password" class="form-control" id="password_old" name="password_old" data-match="#password_old1" data-error="密碼錯誤" required >
+											<input type="hidden" id="password_old1" name="password_old1"  value="<?php echo $_SESSION['member']['password']; ?>">
+											<div class="help-block with-errors"></div>
+										</div>
+										</div>
+										<div class="col-sm-12 col-md-12">
+											<div class="form-group">
+												<label for="password_1">新密碼</label>
+												<input type="password" class="form-control" data-minlength="6" id="Password_new" name="Password_new" data-error="請輸入至少6個字元" required>
+												<div class="help-block with-errors"></div>
+											</div>
+										</div>
+										<div class="col-sm-12 col-md-12">
+											<div class="form-group">
+												<label for="password_2">再次輸入新密碼</label>
+												<input type="password" class="form-control" data-minlength="6" id="password_check" name="password_check" data-match="#Password_new" data-error="密碼不符" required>
+												<div class="help-block with-errors"></div>
+										</div>
+										</div>
 													
 										</div>
-									<button type="submit" data-text="login" class="button-one submit-button mt-15">login</button>
+									<button type="submit" data-text="login" class="button-one submit-button mt-15">修改</button>
 								</div>					
 							</div>
 						</form>
@@ -57,7 +76,7 @@
 						<form action="update_member.php" method="post">
 							<div class="col-md-12 col-sm-12 col-xs-12">
 								<div class="customer-login text-left">
-									<h4 class="title-1 title-border text-uppercase mb-30">new customers</h4>
+									<h4 class="title-1 title-border text-uppercase mb-30">會員資料</h4>
 									<div class="billing-details ">
 										<div class="col-sm-12 col-md-12">
 											<div class="form-group">

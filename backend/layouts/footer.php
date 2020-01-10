@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <p class="mb-0">© 2014-2018 Pingendo. All rights reserved</p>
+          <p class="mb-0">© 2014-2018 shaw. All rights reserved</p>
         </div>
       </div>
     </div>

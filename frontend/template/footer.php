@@ -6,29 +6,27 @@
 						<div class="row">
 							<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
 								<div class="single-footer">
-									<h3 class="footer-title  title-border">Contact Us</h3>
+								<h3 class="footer-title  title-border">聯絡我們</h3>
 									<ul class="footer-contact">
-										<li><span>Address :</span>28 Green Tower, Street Name,<br>New York City, USA</li>
-										<li><span>Cell-Phone :</span>012345 - 123456789</li>
-										<li><span>Email :</span>your-email@gmail.com</li>
+										<li><span>地址 :</span>新北市鶯歌區<br></li>
+										<li><span>連絡電話 :</span>012345 - 123456789</li>
+										<li><span>Email :</span>oooxxx12345email@gmail.com</li>
 									</ul>
 								</div>
 							</div>
 							<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
 								<div class="single-footer">
-									<h3 class="footer-title  title-border">accounts</h3>
+									<h3 class="footer-title  title-border">會員專區</h3>
 									<ul class="footer-menu">
-										<li><a href="my-account.php"><i class="zmdi zmdi-dot-circle"></i>My Account</a></li>
-										<li><a href="wishlist.php"><i class="zmdi zmdi-dot-circle"></i>My Wishlist</a></li>
-										<li><a href="cart.php"><i class="zmdi zmdi-dot-circle"></i>My Cart</a></li>
-										<li><a href="login.php"><i class="zmdi zmdi-dot-circle"></i>Sign In</a></li>
-										<li><a href="checkout.php"><i class="zmdi zmdi-dot-circle"></i>Check out</a></li>
+										<li><a href="frontend/cart.php"><i class="zmdi zmdi-dot-circle"></i>會員專區</a></li>
+										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>購物車</a></li>
+										<li><a href="order.php"><i class="zmdi zmdi-dot-circle"></i>我的訂單</a></li>
 									</ul>
 								</div>
 							</div>
-							<div class="col-lg-2 col-md-2 hidden-sm col-xs-12">
+							<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
 								<div class="single-footer">
-									<h3 class="footer-title  title-border">shipping</h3>
+									<h3 class="footer-title  title-border">商品分類</h3>
 									<ul class="footer-menu">
 										<?php foreach($categories as $footer_categories){  ?>
 											<li><a href="frontend/shop.php?category_id=<?php echo $footer_categories['product_categoryID']; ?>"><i class="zmdi zmdi-dot-circle"></i>
@@ -38,7 +36,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 								<div class="single-footer">
 									<h3 class="footer-title  title-border">Email Newsletters</h3>
 									<div class="footer-subscribe">
@@ -48,7 +46,7 @@
 										</form>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -59,7 +57,7 @@
 						<div class="row">
 							<div class="col-sm-6 col-xs-12">
 								<div class="copyright">
-									<p class="mb-0">Copyright <i class="fa fa-copyright"></i> 2018 <span><a href="https://freethemescloud.com/" target="_blank" >Free Themes Cloud</a></span> . All rights reserved. </p>
+									<p class="mb-0">僅供教學作業，不做任何商業用途。</p>
 								</div>
 							</div>
 							<div class="col-sm-6 col-xs-12">
@@ -84,6 +82,7 @@
 		<!-- all js here -->
 		<!-- jquery latest version -->
 		<script src="../js/vendor/jquery-1.12.0.min.js"></script>
+		<script src="../js/jquery-ui/jquery-ui.min.js"></script>
 		<!-- bootstrap js -->
 		<script src="../js/bootstrap.min.js"></script>
 		<!-- jquery.meanmenu js -->
@@ -107,7 +106,9 @@
 		<script src="../js/wow.min.js"></script>
 		<!-- plugins js -->
 		<script src="../js/plugins.js"></script>
+		<script src="../js/validator.min.js"></script>
+		
 		<!-- main js -->
 		<script src="../js/main.js"></script>
 		<script src="../js/jquery.twzipcode.min.js"></script>
-    	<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+   

@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-light">
     <div class="container"> <a class="navbar-brand text-primary" href="../news/list.php">
-        <i class="fa fa-github-alt fa-2x"></i>
-        <b> Cake House</b>
+        <!-- <i class="fa fa-github-alt fa-2x"></i> -->
+        <i class="fa fa-suitcase fa-2x" aria-hidden="true"></i>
+        <b> Travel Luggage</b>
       </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4" style="">
         <span class="navbar-toggler-icon"></span>
       </button>

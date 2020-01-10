@@ -92,16 +92,16 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 				<div class="header-area">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-sm-4 col-sm-offset-4 col-xs-7">
+							<div class="col-sm-4 col-sm-offset-4 col-xs-4">
 								<div class="logo text-center">
 									<a href="index.php"><img src=" img/logo/logo.png " alt="" /></a>
 								</div>
 							</div>
-							<div class="col-sm-4 col-xs-5">
+							<div class="col-sm-4 col-xs-4">
 								<div class="mini-cart text-right">
 									<ul>
 									<?php if(isset($_SESSION['member']) && $_SESSION['member'] !=null) { ?>
-										<li><?php echo $_SESSION['member']['name']?>您好　<a href="customer-account.php" >會員專區 </a><span>|</span></li>
+										<li><?php echo $_SESSION['member']['name']?>您好　<a href="frontend/customer-account.php" >會員專區 </a><span>|</span></li>
 										<li>
 											<a href="frontend/logout.php"><i class="fa fa-sign-out"></i> 登出</a>
 										</li>
@@ -243,25 +243,14 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 								<nav id="dropdown">
 									<ul>
 										<li><a href="index.php">home</a></li>
-										<li><a href="frontend/shop.php">products</a></li>
-										<li><a href="frontend/shop.php">accesories</a></li>
-										<li><a href="frontend/shop.php">lookbook</a></li>
-										<li><a href="frontend/blog.php">blog</a></li>
-										<li><a href="#">pages</a>
+										<li><a href="#">shop</a>
 											<ul>
-												<li><a href="frontend/shop.php">Shop</a></li>
-												<li><a href="frontend/single-product.php">Single Product</a></li>
-												<li><a href="frontend/cart.php">Shopping Cart</a></li>
-												<li><a href="frontend/wishlist.php">Wishlist</a></li>
-												<li><a href="frontend/checkout.php">Checkout</a></li>
-												<li><a href="frontend/order.php">Order</a></li>
-												<li><a href="frontend/login.php">login / Registration</a></li>
-												<li><a href="frontend/my-account.php">My Account</a></li>
-												<li><a href="frontend/404.php">404</a></li>
-												<li><a href="frontend/blog.php">Blog</a></li>
-												<li><a href="frontend/single-blog.php">Single Blog</a></li>
-												<li><a href="frontend/about.php">About Us</a></li>
-												<li><a href="frontend/contact.php">Contact</a></li>
+=												<li class="menu-title">shop's</li>
+												<?php foreach($categories as $product_categories){  ?>
+												<li><a href="shop.php?category_id=<?php echo $product_categories['product_categoryID']; ?>"><?php echo $product_categories['category']; ?></a></li>
+												<!-- <li><a href="shop.php">Bags</a></li>
+												<li><a href="blog.php">Accessories</a></li> -->
+											<?php } ?>
 											</ul>
 										</li>
 										<li><a href="frontend/about.php">about us</a></li>
@@ -295,20 +284,20 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 					<div class="slider-banner">
 						<div class="single-banner banner-1">
 							<a class="banner-thumb" href="#"><img src="img/banner/1.jpg" alt="" /></a>
-							<span class="pro-label new-label hidden-md">new</span>
-							<span class="price hidden-md">$50.00</span>
+							<span class="price hidden-md">$NT 1500</span>
 							<div class="banner-brief">
-								<h2 class="banner-title hidden-md"><a href="#">Product name</a></h2>
-								<p class="mb-0 hidden-md">Furniture</p>
+								<h2 class="banner-title hidden-md"><a href="#">Urbo 2 都市包</a></h2>
+								<p class="mb-0 hidden-md"></p>
 							</div>
-							<a href="#" class="button-one font-16px" data-text="Buy now">Buy now</a>
+							<a href="#" class="button-one font-16px" data-text="Buy now">馬上購買</a>
 						</div>
 						<div class="single-banner banner-2">
+						<span class="pro-label new-label hidden-md">new</span>
 							<a class="banner-thumb" href="#"><img src="img/banner/2.jpg" alt="" /></a>
 							<div class="banner-brief">
-								<h2 class="banner-title hidden-md"><a href="#">New Product 2017</a></h2>
-								<p class="hidden-md hidden-sm hidden-xs">Lorem Ipsum is simply dummy text of the printing and types sate industry. Lorem Ipsum has been the industry.</p>
-								<a href="#" class="button-one font-16px" data-text="Buy now">Buy now</a>
+								<h2 class="banner-title hidden-md"><a href="#"></a></h2>
+								<p class="hidden-md hidden-sm hidden-xs">以自己喜歡的方式安排必需品，同時使所有事情都唾手可得。</p>
+								<a href="#" class="button-one font-16px" data-text="Buy now">馬上購買</a>
 							</div>
 						</div>
 					</div>
@@ -339,7 +328,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 												<h3 class="slider-title2 text-uppercase" >gallery 2017</h3>
 											</div>
 											<div class="wow fadeIn" data-wow-duration="2.5s" data-wow-delay="3.5s">
-												<a href="#" class="button-one style-2 text-uppercase mt-20" data-text="Shop now">Shop now</a>
+												<a href="#" class="button-one style-2 text-uppercase mt-20" data-text="Shop now">馬上購買</a>
 											</div>
 										</div>
 									</div>
@@ -352,16 +341,16 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 									<div class="title-container s-tb-c title-compress">
 										<div class="layer-1">
 											<div class="wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.5s">
-												<h2 class="slider-title3 text-uppercase mb-0" >welcome to our</h2>
+												<h2 class="slider-title3 text-uppercase mb-0" >加入Urbo 2家族 </h2>
 											</div>
 											<div class="wow fadeInUpBig" data-wow-duration="1.5s" data-wow-delay="0.5s">
-												<h2 class="slider-title1 text-uppercase">furniture</h2>
+												<h2 class="slider-title1 text-uppercase">經典的海軍和灰色</h2>
 											</div>
 											<div class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.5s">
-												<p class="slider-pro-brief">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+												<p class="slider-pro-brief">專為城市探索而設計，這款城市包輕鬆舒適地滿足您的所有必需品。</p>
 											</div>
 											<div class="wow fadeInUpBig" data-wow-duration="2.5s" data-wow-delay="0.5s">
-												<a href="#" class="button-one style-2 text-uppercase mt-20" data-text="Shop now">Shop now</a>
+												<a href="#" class="button-one style-2 text-uppercase mt-20" data-text="Shop now">查    看</a>
 											</div>
 										</div>
 									</div>
@@ -456,8 +445,8 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 						<div class="col-12 col-md-6" style="height: 600px;">
 							<div class="showcase__column-content">
 								<div href="#" class="showcase__column-text" style="word-wrap:break-word;">
-									<p class="front">Classics that Stand Apart</p>
-									<h4>Joining the Urbo 2 family, introducing classic Navy and Gray. Designed for urban exploring, this city bag fits all your essentials with ease and comfort.</h4>
+									<p class="front">首先準備一個包包來裝重要的行李吧</p>
+									<h4> 考量行李的量與移動方式，選擇適切旅行方式的包包吧。如果打算多買伴手禮，估計回程行李量較多時，建議購買稍微大一點的包款比較放心。</h4>
 								</div>
 								
 								<div class="showcase__sm-image">
@@ -479,8 +468,8 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 								<img src="img/airplane.png" alt="">
 							</div>
 							<div class="three-col__content">
-								<h4 class="footer-title ">Inspired by real journeys</h4>
-								<h5 class=" " >Designed for today’s traveler.</h5>
+								<h4 class="footer-title ">真實旅程的啟發</h4>
+								<h5 class=" " >專為旅行者設計</h5>
 							</div>
 						</div>
 						<div class=" col-md-4 ">
@@ -488,8 +477,8 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 								<img src="img/shield.png" alt="">
 							</div>
 							<div class="three-col__content">
-								<h4 class="footer-title ">Premium quality</h4>
-								<h5 class=" ">Crafted from the highest-grade materials.</h5>
+								<h4 class="footer-title ">優良品質</h4>
+								<h5 class=" ">由最高等級的材料製成</h5>
 							</div>
 						</div>
 						<div class=" col-md-4 ">
@@ -497,8 +486,8 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 								<img src="img/icon.png" alt="">
 							</div>
 							<div class="three-col__content">
-								<h4 class="footer-title ">Thoughtful innovation</h4>
-								<h5 class=" ">Intelligent solutions. Zero gimmicks.</h5>
+								<h4 class="footer-title ">周到的服務</h4>
+								<h5 class=" ">安心的保證</h5>
 							</div>
 						</div>
 					</div>
@@ -512,7 +501,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="section-title text-center">
-								<h2 class="title-border">Featured Products</h2>
+								<h2 class="title-border">熱門產品</h2>
 							</div>
 						</div>
 					</div>
@@ -662,29 +651,27 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 						<div class="row">
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 								<div class="single-footer">
-									<h3 class="footer-title  title-border">Contact Us</h3>
+									<h3 class="footer-title  title-border">聯絡我們</h3>
 									<ul class="footer-contact">
-										<li><span>Address :</span>28 Green Tower, Street Name,<br>New York City, USA</li>
-										<li><span>Cell-Phone :</span>012345 - 123456789</li>
-										<li><span>Email :</span>your-email@gmail.com</li>
+										<li><span>地址 :</span>新北市鶯歌區<br></li>
+										<li><span>連絡電話 :</span>012345 - 123456789</li>
+										<li><span>Email :</span>oooxxx12345email@gmail.com</li>
 									</ul>
 								</div>
 							</div>
 							<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
 								<div class="single-footer">
-									<h3 class="footer-title  title-border">accounts</h3>
+									<h3 class="footer-title  title-border">會員專區</h3>
 									<ul class="footer-menu">
-										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>My Account</a></li>
-										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>My Wishlist</a></li>
-										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>My Cart</a></li>
-										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>Sign In</a></li>
-										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>Check out</a></li>
+										<li><a href="frontend/cart.php"><i class="zmdi zmdi-dot-circle"></i>會員專區</a></li>
+										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>購物車</a></li>
+										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>我的訂單</a></li>
 									</ul>
 								</div>
 							</div>
 							<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
 								<div class="single-footer">
-									<h3 class="footer-title  title-border">shipping</h3>
+									<h3 class="footer-title  title-border">商品分類</h3>
 									<ul class="footer-menu">
 										<?php foreach($categories as $footer_categories){  ?>
 											<li><a href="frontend/shop.php?category_id=<?php echo $footer_categories['product_categoryID']; ?>"><i class="zmdi zmdi-dot-circle"></i>
@@ -694,7 +681,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 									</ul>
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-4 hidden-sm col-xs-12">
+							<!-- <div class="col-lg-4 col-md-4 hidden-sm col-xs-12">
 								<div class="single-footer">
 									<h3 class="footer-title  title-border">your choice Products</h3>
 									<div class="footer-product">
@@ -719,7 +706,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -731,7 +718,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 						<div class="row">
 							<div class="col-sm-6 col-xs-12">
 								<div class="copyright">
-									<p class="mb-0">Copyright <i class="fa fa-copyright"></i> 2018 <span><a href="https://freethemescloud.com/" target="_blank" >Free Themes Cloud</a></span> . All rights reserved. </p>
+									<p class="mb-0">僅供教學作業，不做任何商業用途。</p>
 								</div>
 							</div>
 							<div class="col-sm-6 col-xs-12">

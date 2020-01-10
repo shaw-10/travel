@@ -44,5 +44,65 @@ for($i = 0; $i < count($_SESSION['Cart']); $i++){
 }
 // 記得寫入完成後要清空購物車
 unset($_SESSION['Cart']);
-header('Location: order.php');
+
 ?>
+
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Login / Registration || Hurst</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<?php require_once('template/head.php'); ?>
+		
+	</head>
+	<body>
+<?php require_once('template/nav.php'); ?>
+    <!-- *** NAVBAR END *** -->
+
+    <div id="all">
+
+        <div id="content">
+            <div class="container">
+
+                <div class="col-md-12">
+
+                    <ul class="breadcrumb">
+                        
+                    </ul>
+                    <div class="container-fluid">
+                    <div class="row" id="error-page">
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-center" style="margin:auto;float: none;">
+                            <div class="customer-login" style="margin: 0 0 50px;">
+
+                                <p class="text-life">
+                                    <img src="../img/logo/logo.png" alt="Cake House template">
+                                    </p>
+                              
+                              <h3>結帳成功</h3>
+                              
+                              <p class="text-center">您已成功完成購物，您可前往</p>
+                            <a href="order.php" class="button-one submit-button mt-15">我的訂單</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+                <!-- /.col-md-9 -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+
+        <?php require_once('template/footer.php'); ?>
+
+
+
+</body>
+</html>
