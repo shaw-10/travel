@@ -42,7 +42,7 @@ $sql= "INSERT INTO members  (account, password, name, created_at) VALUES (:accou
                             <div class="customer-login" style="margin: 0 0 50px;">
 
                                 <p class="text-life">
-                                    <img src="../img/logo/logo.png" alt="Cake House template">
+                                    <img src="../img/logo/logo3.png" alt="Cake House template">
                                 </p>
                                 <h3>登出成功</h3>
                                

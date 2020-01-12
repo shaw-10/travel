@@ -17,10 +17,10 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 						<div class="row">
 							<div class="col-sm-4 col-sm-offset-4 col-xs-7">
 								<div class="logo text-center">
-									<a href="../index.php"><img src="../img/logo/logo.png" alt="" /></a>
+									<a href="../index.php"><img src="../img/logo/logo3.png" alt="" /></a>
 								</div>
 							</div>
-							<div class="col-sm-4 col-xs-5">
+							<div class="col-sm-4 col-xs-12">
 								<div class="mini-cart text-right">
 									<ul>
 									<?php if(isset($_SESSION['member']) && $_SESSION['member'] !=null) { ?>
@@ -141,6 +141,7 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 									<ul>
 									
 										<li class="menu-title">shop's</li>
+										<li class="menu-title"><a href="shop_f.php">All</li>
 										<?php foreach($categories as $product_categories){  ?>
 										<li><a href="shop.php?category_id=<?php echo $product_categories['product_categoryID']; ?>"><?php echo $product_categories['category']; ?></a></li>
 										<!-- <li><a href="shop.php">Bags</a></li>

@@ -26,13 +26,17 @@ $products = $query->fetchAll(PDO::FETCH_ASSOC);
 						<div class="col-md-12">
 							<div class="heading-banner">
 								<div class="heading-banner-title">
-									<h2>Shop</h2>
+									<h2>旅行好夥伴</h2>
 								</div>
 								<div class="breadcumbs pb-15">
 									<ul>
 										<li><a href="../index.php">Home</a></li>
-										<li>Shop</li>
+										<li><a href="shop_f.php">shop</a></li>
+										<li><?php echo $product_categories['category']; ?></li>
+										
+										
 									</ul>
+										
 								</div>
 							</div>
 						</div>
@@ -51,13 +55,13 @@ $products = $query->fetchAll(PDO::FETCH_ASSOC);
 									<!-- Categories start -->
 									<div class="dropdown floatleft">
 										<button class="option-btn" >
-										Categories
+										商品種類
 										</button>
 										<div class="dropdown-menu dropdown-width" >
 											<!-- Widget-Categories start -->
 											<aside class="widget widget-categories">
 												<div class="widget-title">
-													<h4>Categories</h4>
+													<h4>商品種類</h4>
 												</div>
 												<div id="cat-treeview"  class="widget-info product-cat boxscrol2">
 													<ul class="footer-menu">
@@ -65,7 +69,7 @@ $products = $query->fetchAll(PDO::FETCH_ASSOC);
 														 $query = $db->query("SELECT * FROM products WHERE product_categoryID=".$category['product_categoryID']);
 													?>
 														<li><span>
-														<a href="#"><?php echo $category['category']; ?> </a>
+														<a href="shop.php?category_id=<?php echo $product_categories['product_categoryID']; ?>"><?php echo $category['category']; ?> </a>
 														</span>
 															
 														</li>

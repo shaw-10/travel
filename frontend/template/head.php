@@ -1,4 +1,4 @@
-<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="../img/Tripcom.ico">
 		<!-- Place favicon.ico in the root directory -->
 		
 		<!-- Google Font -->

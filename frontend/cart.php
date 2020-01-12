@@ -263,7 +263,7 @@
 											</div>
 											<?php } else{ 
 												$total_price = 0; ?>
-												<h4>目前購物車沒有商品，請至<a href="product_list.php">產品專區</a>進行購物。</h4>         
+												<h4>目前購物車沒有商品，請至<a href="shop_f.php">產品專區</a>進行購物。</h4>         
 											<?php } ?>
 										</form>									
 									</div>

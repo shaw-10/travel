@@ -99,14 +99,14 @@
 											<a href="#"><i class="zmdi zmdi-star"></i></a>
 											<a href="#"><i class="zmdi zmdi-star-half"></i></a>
 											<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-											<span>( 27 Rating )</span>
+											<span></span>
 										</span>
 									</div>
 									<div class="fix mb-20">
 										<span class="pro-price">$NT <?php echo $one_product['price']; ?></span>
 									</div>
 									<div class="product-description">
-										<p>There are many variations of passages of Lorem Ipsum available, but the majority have be suffered alteration in some form, by injected humou or randomised words which donot look even slightly believable. If you are going to use a passage of Lorem Ipsum. </p>
+										<p><?php echo $one_product['description']; ?> </p>
 									</div>
 									<!-- color start -->								
 									<div class="color-filter single-pro-color mb-20 clearfix">

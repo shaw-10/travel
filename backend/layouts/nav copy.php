@@ -9,6 +9,7 @@
       <div class="collapse navbar-collapse" id="navbar4">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"> <a class="nav-link" href="../page/update.php?pageID=1">關於我們管理</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="../news/list.php">最新消息管理</a></li>
           <li class="nav-item"> <a class="nav-link" href="../members/list.php">會員管理</a> </li>
           <li class="nav-item"> <a class="nav-link" href="../product_categories/list.php">產品管理</a> </li>
           <li class="nav-item"> <a class="nav-link" href="../customer_orders/list.php?status=888">訂單管理</a> </li>

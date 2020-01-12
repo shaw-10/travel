@@ -23,7 +23,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="img/Tripcom.ico">
 		<!-- Place favicon.ico in the root directory -->
 
 		<!-- Google Font -->
@@ -92,12 +92,12 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 				<div class="header-area">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-sm-4 col-sm-offset-4 col-xs-4">
-								<div class="logo text-center">
-									<a href="index.php"><img src=" img/logo/logo.png " alt="" /></a>
+							<div class="col-sm-4 col-sm-offset-4 col-xs-12">
+								<div class="logo text-center" style="width=80px;">
+									<a href="index.php"><img src=" img/logo/logo3.png " style="width=80px;" alt="" /></a>
 								</div>
 							</div>
-							<div class="col-sm-4 col-xs-4">
+							<div class="col-sm-4 col-xs-12">
 								<div class="mini-cart text-right">
 									<ul>
 									<?php if(isset($_SESSION['member']) && $_SESSION['member'] !=null) { ?>
@@ -217,6 +217,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 									<ul>
 									
 										<li class="menu-title">shop's</li>
+										<li><a href="frontend/shop_f.php">All</li>
 										<?php foreach($categories as $product_categories){  ?>
 										<li><a href="frontend/shop.php?category_id=<?php echo $product_categories['product_categoryID']; ?>"><?php echo $product_categories['category']; ?></a></li>
 										<!-- <li><a href="shop.php">Bags</a></li>
@@ -439,13 +440,14 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 			<div class="product-area pt-80 pb-35" style="padding-bottom: 90px;">
 				<div class="container">
 					<div class="row">
+					<div class="col-sm-12 col-xs-12">
 						<div class="col-12 col-md-6" >
 							<img src="img/index1.jpg" alt="">
 						</div>
 						<div class="col-12 col-md-6" style="height: 600px;">
 							<div class="showcase__column-content">
 								<div href="#" class="showcase__column-text" style="word-wrap:break-word;">
-									<p class="front">首先準備一個包包來裝重要的行李吧</p>
+									<p class="front" style="line-height:30px;">準備一個包包來裝重要的行李吧</p>
 									<h4> 考量行李的量與移動方式，選擇適切旅行方式的包包吧。如果打算多買伴手禮，估計回程行李量較多時，建議購買稍微大一點的包款比較放心。</h4>
 								</div>
 								
@@ -454,7 +456,8 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 								</div>
 							</div>
 							
-						</div>						
+						</div>
+					</div>						
 					</div>
 				</div>
 			</div>
@@ -663,9 +666,9 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 								<div class="single-footer">
 									<h3 class="footer-title  title-border">會員專區</h3>
 									<ul class="footer-menu">
-										<li><a href="frontend/cart.php"><i class="zmdi zmdi-dot-circle"></i>會員專區</a></li>
-										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>購物車</a></li>
-										<li><a href="#"><i class="zmdi zmdi-dot-circle"></i>我的訂單</a></li>
+										<li><a href="frontend/customer-account.php"><i class="zmdi zmdi-dot-circle"></i>會員專區</a></li>
+										<li><a href="frontend/cart.php"><i class="zmdi zmdi-dot-circle"></i>購物車</a></li>
+										<li><a href="frontend/order.php"><i class="zmdi zmdi-dot-circle"></i>我的訂單</a></li>
 									</ul>
 								</div>
 							</div>
