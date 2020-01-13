@@ -1,3 +1,6 @@
+<?php 
+require_once('is_login.php');
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>

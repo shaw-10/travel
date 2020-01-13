@@ -52,7 +52,7 @@
 										<input type="hidden" name="url" value="<?php echo $_GET['url']; ?>">
 
 									<!-- <p><a href="#" class="text-gray">Forget your password?</a></p> -->
-									<button type="submit" data-text="login" class="button-one submit-button mt-15 text-right" >登入</button>
+									<button type="submit" data-text="登入" class="button-one submit-button mt-15 text-right" >登入</button>
 								</div>					
 							</div>
 						</form>
@@ -86,7 +86,7 @@
 										<input type="hidden" name="created_at" value="<?php echo date('Y-m-d:H-i-s'); ?>">
 									</div>
 									
-									<button type="submit" data-text="regiter" class="button-one submit-button mt-15" >註冊</button>
+									<button type="submit" data-text="註冊" class="button-one submit-button mt-15" >註冊</button>
 								</div>					
 							</div>
 						</form>

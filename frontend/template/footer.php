@@ -16,7 +16,7 @@
 							</div>
 							<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
 								<div class="single-footer">
-									<h3 class="footer-title  title-border">會員專區</h3>
+									<h3 class="footer-title  title-border">會員中心</h3>
 									<ul class="footer-menu">
 										<li><a href="customer-account.php"><i class="zmdi zmdi-dot-circle"></i>會員專區</a></li>
 										<li><a href="cart.php"><i class="zmdi zmdi-dot-circle"></i>購物車</a></li>

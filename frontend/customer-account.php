@@ -1,3 +1,6 @@
+<?php 
+require_once('is_login.php');
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>
@@ -68,7 +71,9 @@
 										</div>
 													
 										</div>
-									<button type="submit" data-text="login" class="button-one submit-button mt-15">修改</button>
+										<input type="hidden" name="EditForm" value="UPDATE">
+                               			 <input type="hidden" name="memberID" value="<?php echo $_SESSION['member']['memberID']; ?>">
+										<button type="submit" data-text="修改" class="button-one submit-button mt-15">修改</button>
 								</div>					
 							</div>
 						</form>
@@ -156,7 +161,7 @@
 										<div>
 											<input type="hidden" name="EditForm" value="UPDATE">
 											<input type="hidden" name="memberID" value="<?php echo $_SESSION['member']['memberID']; ?>">
-											<button type="submit" data-text="regiter" class="button-one submit-button mt-15">更新資料</button>
+											<button type="submit" data-text="更新資料" class="button-one submit-button mt-15">更新資料</button>
 									
 										</div>
 									

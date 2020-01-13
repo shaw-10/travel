@@ -1,3 +1,4 @@
+
 <?php
 require_once('../function/connection.php');
 
@@ -47,7 +48,7 @@ $sql= "INSERT INTO members  (account, password, name, created_at) VALUES (:accou
                                 <h3>登入失敗</h3>
                                 <h4 class="text-muted">請確認您的帳號密碼是否正確</h4>
 
-                                <p class="buttons"><a href="login.php" class="btn btn-primary"><i class="fa fa-home"></i> 重新登入</a>
+                                <p class="buttons"><a href="login.php" class="button-one submit-button mt-15" data-text="重新登入"><i class="fa fa-home"></i> 重新登入</a>
                                 </p>
                             </div>
                         </div>

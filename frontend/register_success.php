@@ -9,7 +9,6 @@ $sql= "INSERT INTO members  (account, password, name, created_at) VALUES (:accou
   $sth ->bindParam(":created_at", $_POST['created_at'], PDO::PARAM_STR);
   $result = $sth ->execute();
 ?>
-
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>
@@ -52,7 +51,7 @@ $sql= "INSERT INTO members  (account, password, name, created_at) VALUES (:accou
                                 <h4 class="text-muted">恭喜您加入會員</h4>
 
                                 <p class="text-center">您可前往產品頁面瀏覽商品。<a href="shop.php?category_id=1">前往購物</a></p>
-                                <p class="buttons"><a href="../index.php" class="btn btn-primary"><i class="fa fa-home"></i> 回首頁</a>
+                                <p class="buttons"><a href="../index.php" class="button-one submit-button mt-15" data-text="回首頁"><i class="fa fa-home"></i> 回首頁</a>
                                 </p>
                                 <?php } ?>
                               <?php }else{ ?>
@@ -60,7 +59,7 @@ $sql= "INSERT INTO members  (account, password, name, created_at) VALUES (:accou
                                 <h4 class="text-muted">請聯繫客服或前往註冊頁面重新註冊</h4>
 
                                
-                                <p class="buttons"><a href="login.php" class="btn btn-primary"><i class="fa fa-home"></i> 回註冊頁面</a>
+                                <p class="buttons"><a href="login.php"  class="button-one submit-button mt-15" data-text="重新登入"><i class="fa fa-home"></i> 回註冊頁面</a>
                                 </p>
                               <?php } ?>
                             </div>

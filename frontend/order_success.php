@@ -1,3 +1,6 @@
+<?php 
+require_once('is_login.php');
+?>
 <?php
 session_start();
 require_once('../function/connection.php');

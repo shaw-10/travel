@@ -48,7 +48,7 @@ $sql= "INSERT INTO members  (account, password, name, created_at) VALUES (:accou
                                
 
                                
-                                <p class="buttons"><a href="shop_f.php" class="btn btn-primary"><i class="fa fa-home"></i> 瀏覽產品</a>
+                                <p class="buttons"><a href="shop_f.php" class="button-one submit-button mt-15" data-text="瀏覽商品"><i class="fa fa-home"></i> 瀏覽商品</a>
                                 </p>
                             </div>
                         </div>

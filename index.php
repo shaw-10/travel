@@ -111,7 +111,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 										<li><a href="frontend/login.php?url=add">加入會員 </a><span>|</span>
 										</li>
 									<?php } ?>
-										<li><a href="contact.php">聯絡我們</a></li>
+										<li><a href="frontend/contact.php">聯絡我們</a></li>
 										
 										<li>
 											<a class="cart-icon" href="cart.php">
@@ -121,7 +121,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 											
 											<div class="mini-cart-brief text-left">
 												<div class="cart-items">
-													<p class="mb-0">You have <span><?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) echo count($_SESSION['Cart']); else echo "0"; ?> items</span> in your shopping bag</p>
+												<p class="mb-0">購物車內 <span><?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) echo count($_SESSION['Cart']); else echo "0"; ?>件 </span> 商品</p>
 												</div>
 												<?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) {?>>
 												<div class="all-cart-product clearfix">
@@ -211,12 +211,12 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 				<nav>
 						<ul>
 							<li><a href="../index.php">home</a></li>
-							<li><a href="#">shop</a>
+							<li><a href="#">商品</a>
 								<div class="sub-menu menu-scroll">
 										
 									<ul>
 									
-										<li class="menu-title">shop's</li>
+										<li class="menu-title">商品們</li>
 										<li><a href="frontend/shop_f.php">All</li>
 										<?php foreach($categories as $product_categories){  ?>
 										<li><a href="frontend/shop.php?category_id=<?php echo $product_categories['product_categoryID']; ?>"><?php echo $product_categories['category']; ?></a></li>
@@ -227,8 +227,20 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 								
 								</div>
 							</li>
-							<li><a href="frontend/about.php">about us</a></li>
-							<li><a href="frontend/contact.php">contact</a></li>
+=							<li><a href="frontend/about.php">關於我們</a></li>
+							<li><a href="frontend/contact.php">連絡我們</a></li>
+							<li><a href="frontend/customer-account.php">會員中心</a>
+								<div class="sub-menu menu-scroll">
+										
+									<ul>
+										<li class="menu-title">會員中心</li>
+										<li><a href="frontend/customer-account.php"><i class="zmdi zmdi-dot-circle"></i>會員專區</a></li>
+										<li><a href="frontend/cart.php"><i class="zmdi zmdi-dot-circle"></i>購物車</a></li>
+										<li><a href="frontend/order.php"><i class="zmdi zmdi-dot-circle"></i>我的訂單</a></li>
+									</ul>
+								
+								</div>
+							</li>
 						</ul>
 					</nav>
 				</div>
@@ -555,17 +567,17 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 			<div class="blog-area pt-55">
 				<div class="container">
 					<!-- Section-title start -->
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-lg-12">
 							<div class="section-title text-center">
 								<h2 class="title-border">From The Blog</h2>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- Section-title end -->
 					<div class="row">
 						<!-- Single-blog start -->
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="single-blog mt-30">
 								<div class="row">
 									<div class="col-lg-6 col-md-7 col-sm-7 col-xs-12">
@@ -593,10 +605,10 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!-- Single-blog end -->
 						<!-- Single-blog start -->
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="single-blog mt-30">
 								<div class="row">
 									<div class="col-lg-6 col-md-7 col-sm-7 col-xs-12">
@@ -624,7 +636,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!-- Single-blog end -->
 					</div>
 				</div>
@@ -664,7 +676,7 @@ $news = $query3->fetchALL(PDO::FETCH_ASSOC);
 							</div>
 							<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
 								<div class="single-footer">
-									<h3 class="footer-title  title-border">會員專區</h3>
+									<h3 class="footer-title  title-border">會員中心</h3>
 									<ul class="footer-menu">
 										<li><a href="frontend/customer-account.php"><i class="zmdi zmdi-dot-circle"></i>會員專區</a></li>
 										<li><a href="frontend/cart.php"><i class="zmdi zmdi-dot-circle"></i>購物車</a></li>

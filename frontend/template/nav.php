@@ -44,7 +44,7 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 											
 											<div class="mini-cart-brief text-left">
 												<div class="cart-items">
-													<p class="mb-0">You have <span><?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) echo count($_SESSION['Cart']); else echo "0"; ?> items</span> in your shopping bag</p>
+													<p class="mb-0">購物車內 <span><?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) echo count($_SESSION['Cart']); else echo "0"; ?> 件</span> 商品</p>
 												</div>
 												<?php if(isset($_SESSION['Cart']) && $_SESSION['Cart'] != null) {?>>
 												<div class="all-cart-product clearfix">
@@ -135,12 +135,12 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 					<nav>
 						<ul>
 							<li><a href="../index.php">home</a></li>
-							<li><a href="#">shop</a>
+							<li><a href="#">商品</a>
 								<div class="sub-menu menu-scroll">
 										
 									<ul>
 									
-										<li class="menu-title">shop's</li>
+										<li class="menu-title">商品們</li>
 										<li class="menu-title"><a href="shop_f.php">All</li>
 										<?php foreach($categories as $product_categories){  ?>
 										<li><a href="shop.php?category_id=<?php echo $product_categories['product_categoryID']; ?>"><?php echo $product_categories['category']; ?></a></li>
@@ -151,8 +151,20 @@ $categories = $query->fetchALL(PDO::FETCH_ASSOC);
 								
 								</div>
 							</li>
-							<li><a href="about.php">about us</a></li>
-							<li><a href="contact.php">contact</a></li>
+							<li><a href="about.php">關於我們</a></li>
+							<li><a href="contact.php">聯絡我們</a></li>
+							<li><a href="customer-account.php">會員中心</a>
+								<div class="sub-menu menu-scroll">
+										
+								<ul>
+									<li class="menu-title">會員中心</li>
+									<li><a href="customer-account.php"><i class="zmdi zmdi-dot-circle"></i>會員專區</a></li>
+									<li><a href="cart.php"><i class="zmdi zmdi-dot-circle"></i>購物車</a></li>
+									<li><a href="order.php"><i class="zmdi zmdi-dot-circle"></i>我的訂單</a></li>
+								</ul>
+								
+								</div>
+							</li>
 						</ul>
 					</nav>
 				</div>
